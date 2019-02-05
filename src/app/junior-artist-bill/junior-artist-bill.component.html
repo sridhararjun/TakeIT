@@ -1,0 +1,90 @@
+<div class="header">
+  <div class="row">
+    <div class="col-lg-1 col-md-1"></div>
+    <div class="col-lg-10 col-md-10 col-sm-12 user-header">
+      <div class="row">
+        <div class="col-sm-12" style="margin-top: 2%">
+          <img src="../../assets/Login/login_ellipse_logo.png" class="header-logo">
+          <span class="header-company-name">Cine Agents Association</span>
+        </div>
+        <div class="col-sm-12">
+          <div class="user-details-header" style="margin-top: 0;top: 0;">
+            <span>Sankar Murugamuthu</span>
+            <img src="../../assets/user.jpg" class="user-image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-1 col-md-1"></div>
+  </div>
+</div>
+<div class="header-2">
+  <div class="col-lg-1 col-md-1 col-sm-1"></div>
+  <div class="col-lg-6 col-md-6 col-sm-6 header-2-title">
+    Junior Artists Bill
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+    <div class="col-lg-10 col-md-10 col-sm-10">
+      <div class="bills">
+        <form>
+          <div class="row form-spacing">
+            <div class="form-group col-lg-3 col-md-3 col-sm-3">
+              <label for="companyName">Company Name</label>
+              <input type="text" class="form-control" id="companyName" placeholder="Enter Company Name">
+            </div>
+            <div class="form-group col-lg-3 col-md-3 col-sm-3">
+              <label for="agentName">Agent Name</label>
+              <input type="text" class="form-control" id="agentName" placeholder="Enter Agent Name">
+            </div>
+            <div class="form-group col-lg-3 col-md-3 col-sm-3">
+              <label for="date">Date</label>
+              <input type="date" class="form-control" id="date">
+            </div>
+            <div class="form-group col-lg-3 col-md-3 col-sm-3">
+              <label for="language">Language</label><br>
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Language</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item">Action</a>
+                <a class="dropdown-item">Another action</a>
+                <a class="dropdown-item">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Time</th>
+                <th>Qty</th>
+                <th>Rate</th>
+                <th>Call Sheet(in days)</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let field of fieldArray; let i = index">
+                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
+                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
+                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
+                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
+                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
+                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
+                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
+                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-10"></div>
+  </div>
+</div>
