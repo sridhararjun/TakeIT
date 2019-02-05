@@ -68,20 +68,27 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let field of fieldArray; let i = index">
-                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
-                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
-                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
-                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
-                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
-                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
-                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
-                <td><input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" /></td>
+              <tr *ngFor="let field of entry; let i = index">
+                <td><input [(ngModel)]="field.No" class="form-control" type="number" name="{{field.No}}" /></td>
+                <td><input [(ngModel)]="field.Date" class="form-control" type="date" name="{{field.Date}}" /></td>
+                <td><input [(ngModel)]="field.Description" class="form-control" type="text" name="{{field.Description}}" /></td>
+                <td><input [(ngModel)]="field.Time" class="form-control" type="time" name="{{field.Time}}" /></td>
+                <td><input [(ngModel)]="field.Qty" class="form-control" type="number" name="{{field.Qty}}" /></td>
+                <td><input [(ngModel)]="field.Rate" class="form-control" type="number" name="{{field.Rate}}" /></td>
+                <td><input [(ngModel)]="field.CallSheet" class="form-control" type="number" name="{{field.CallSheet}}" /></td>
+                <td><input [(ngModel)]="field.Total" class="form-control" type="number" name="{{field.Total}}" /></td>
+                <td>
+                  <button class="btn btn-default deleteButton" type="button" (click)="deleteFieldValue(i)"><span class="deleteIcon">-</span></button>
+                </td>
+
               </tr>
             </tbody>
+            <button class="btn btn-default" type="button" (click)="addFieldValue()">Add</button>
+
           </table>
 
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary saveButton"><a href="" download>Save & Download</a></button>
+          <button type="submit" class="btn btn-primary saveButton">Save & Print</button>
         </form>
       </div>
     </div>

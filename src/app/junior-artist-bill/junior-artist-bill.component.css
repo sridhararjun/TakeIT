@@ -77,3 +77,24 @@ div.user-details-header{
     /* margin-left: 100%; */
     position: absolute;
 }
+
+.deleteIcon{
+    color: white;
+    font-size: 1.2em;
+    /* margin: 0 atuo; */
+    /* padding: 0; */
+}
+
+.deleteButton{
+    background-color: red;
+    border: none;
+    border-radius: 20%;
+}
+
+.saveButton{
+    justify-content: center;
+    vertical-align: middle;
+    padding: 10px;
+    margin-left: 25%;
+    /* margin: 30px; */
+}

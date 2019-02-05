@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Model } from '../model';
+
 @Component({
   selector: 'app-junior-artist-bill',
   templateUrl: './junior-artist-bill.component.html',
@@ -7,17 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JuniorArtistBillComponent implements OnInit {
 
-  private fieldArray: Array<any> = [];
-    private newAttribute: any = {};
+  public entry: Array<Model> = [];
+  private newAttribute: any = {};
 
-    addFieldValue() {
-        this.fieldArray.push(this.newAttribute)
-        this.newAttribute = {};
-    }
+  addFieldValue() {
+      this.entry.push(this.newAttribute);
+      this.newAttribute = {};
+  }
 
-    deleteFieldValue(index) {
-        this.fieldArray.splice(index, 1);
-    }
+  deleteFieldValue(index) {
+    this.entry.splice(index, 1);
+  }
   constructor() { }
 
   ngOnInit() {
